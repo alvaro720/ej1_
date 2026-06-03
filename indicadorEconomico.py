@@ -1,4 +1,4 @@
-from datetime import datetime
+﻿from datetime import datetime
 
 class IndicadorEconomico:
     def __init__(self, nombre: str, fecha: str, valor: float, fuente: str = "mindicador.cl"):
@@ -16,8 +16,12 @@ class IndicadorEconomico:
             "valor": self.valor,
             "fuente": self.fuente,
             "fecha_consulta": self.fecha_consulta,
-            "usuario": self.usuario
+            "usuario": self.usuario,
         }
 
     def __str__(self):
-        return f"{self.nombre} | Fecha: {self.fecha} | Valor: ${self.valor:,.2f}"
+        base = f"{self.nombre} | Fecha valor: {self.fecha} | Valor: {self.valor:,.2f}"
+        if self.usuario:
+            base += f" | Usuario: {self.usuario}"
+        base += f" | Fuente: {self.fuente}"
+        return base

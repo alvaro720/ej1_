@@ -1,0 +1,32 @@
+Instrucciones para ejecutar el proyecto ej1_eva_3
+
+Requisitos:
+- Python 3.8+ instalado
+- MySQL instalado y en ejecución
+- Base de datos creada usando el script monopoli.sql
+- Paquetes Python: bcrypt, requests, mysql-connector-python
+
+Instalación de dependencias:
+1. Abra una terminal en la carpeta ej1_
+2. Ejecute:
+   pip install bcrypt requests mysql-connector-python
+
+Configuración de MySQL:
+1. Abra MySQL Workbench o la consola MySQL.
+2. Ejecute el script monopoli.sql para crear la base de datos y las tablas.
+3. Si su usuario o contraseña de MySQL no son los predeterminados, edite el archivo Dao/conexiones.py y ajuste los valores de host, user, password y database.
+
+Uso del programa:
+1. Abra una terminal en la carpeta ej1_
+2. Ejecute:
+   python ej.py
+3. Seleccione si desea iniciar sesión o registrar un nuevo usuario.
+4. Ingrese su RUT y contraseña.
+5. Elija el indicador económico a consultar.
+6. Ingrese una fecha en formato YYYY-MM-DD o presione Enter para usar la fecha actual.
+7. El programa consultará mindicador.cl, mostrará el resultado y guardará el indicador en la base de datos.
+
+Notas:
+- El programa guarda los datos en la tabla IndicadorEconomico de la base de datos monopoli.
+- El campo usuario se guarda con el RUT que inició sesión.
+- Si quiere agregar más usuarios, use la opción de registro.
